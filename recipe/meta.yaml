@@ -1,5 +1,5 @@
 {% set name = "sshuttle" %}
-{% set version = "0.78.5" %}
+{% set version = "1.0.5" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sshuttle-{{ version }}.tar.gz
-  sha256: a88b59bd9a25510a6643451ec2d5fc35e149098a6a7fafdf37957498791fe16e
+  sha256: fd8c691aac2cb80933aae7f94d9d9e271a820efc5c48e73408f1a90da426a1bd
 
 build:
   number: 0
@@ -20,11 +20,11 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - setuptools_scm
   run:
     - psutil
-    - python
+    - python >=3.6
 
 test:
   imports:
@@ -39,7 +39,7 @@ test:
 about:
   home: https://github.com/sshuttle/sshuttle
   summary: Full-featured" VPN over an SSH tunnel
-  license: LGPL-2.0-or-later
+  license: LGPL-2.1-or-later
   license_file: LICENSE
 
 extra:
