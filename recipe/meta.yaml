@@ -19,11 +19,9 @@ build:
 
 requirements:
   host:
-    - pip
     - python >=3.6
     - setuptools_scm
   run:
-    - psutil
     - python >=3.6
 
 test:
