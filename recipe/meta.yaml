@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sshuttle-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sshuttle-{{ version }}.tar.gz
   sha256: f5a3ed1e5ab1213c7a6df860af41f1a903ab2cafbfef71f371acdcff21e69ee6
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - sshuttle = sshuttle.cmdline:main
@@ -20,10 +20,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools_scm
   run:
-    - python >=3.8
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -34,6 +34,7 @@ test:
     - sshuttle --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/sshuttle/sshuttle
