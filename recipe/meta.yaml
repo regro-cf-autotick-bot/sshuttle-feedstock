@@ -1,5 +1,5 @@
 {% set name = "sshuttle" %}
-{% set version = "1.1.1" %}
+{% set version = "1.2.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sshuttle-{{ version }}.tar.gz
-  sha256: f5a3ed1e5ab1213c7a6df860af41f1a903ab2cafbfef71f371acdcff21e69ee6
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sshuttle-{{ version }}.tar.gz
+  sha256: d887f9873f4e4358f9d51bd85496dd766ae0461f04130d6bed4276f77a1810fa
 
 build:
   number: 0
